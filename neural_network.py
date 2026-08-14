@@ -25,3 +25,5 @@ class MNISTNet(nn.Module):
         x = self.fc1(x)
 
         return x
+
+model = MNISTNet()
