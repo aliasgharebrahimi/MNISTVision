@@ -14,3 +14,4 @@ for epochs in range(EPOCHS):
 
     print(f"train loss: {train_loss:.4f}")
     print(f"eval loss: {eval_loss:.4f}")
+    print(60 * "=")
