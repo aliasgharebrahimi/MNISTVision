@@ -2,7 +2,7 @@ import torch
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def train(model, data, dataloader, optimizer, loss_fun ):
+def train(model, device, dataloader, optimizer, loss_fun ):
 
     model.train()
     model = model.to(device)
