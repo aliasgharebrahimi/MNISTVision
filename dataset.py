@@ -1,16 +1,17 @@
-import torch
-import torchvision.datasets.MNIST as MNIST
+from torchvision.datasets import MNIST
+from transforms import train_transforms, eval_transforms
+
 
 train_data = MNIST(
     root="./data",
     train=True,
-    transforms=train_transforms,
+    transform=train_transforms,
     download=True
 )
 
 eval_data = MNIST(
     root="./data",
     train=False,
-    transforms=eval_transforms,
+    transform=eval_transforms,
     download=True
 )
