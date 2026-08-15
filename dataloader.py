@@ -5,12 +5,14 @@ train_dataloader = DataLoader(
     train_data,
     batch_size=64,
     shuffle=True,
-    num_workers=0
+    num_workers=0,
+    pin_memory=False
 )
 
 eval_dataloader = DataLoader(
     train_data,
     batch_size=64,
     shuffle=True,
-    num_workers=0
+    num_workers=0,
+    pin_memory=False
 )
