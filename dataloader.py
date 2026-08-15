@@ -4,11 +4,15 @@ from dataset import train_data, eval_data
 train_dataloader = DataLoader(
     train_data,
     batch_size=64,
-    shuffle=True
+    shuffle=True,
+    num_workers=0,
+    pin_memory=False
 )
 
 eval_dataloader = DataLoader(
     train_data,
     batch_size=64,
-    shuffle=True
+    shuffle=True,
+    num_workers=0,
+    pin_memory=False
 )
