@@ -12,7 +12,6 @@ wandb.init(
     config={
         "batch_size": BATCH_SIZE,
         "learning_rate": LR,
-        "epochs": EPOCHS,
         "optimizer": OPTIMIZER,
     }
 )
@@ -29,5 +28,5 @@ for epochs in range(EPOCHS):
     wandb.log({
         "train_loss": train_loss,
         "val_loss": eval_loss,
-        "epoch": epoch + 1,
+        "epoch": epochs + 1,
     })
