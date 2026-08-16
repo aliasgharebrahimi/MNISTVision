@@ -5,12 +5,12 @@ from optimizer import optimizer
 from loss import loss_function
 from tarin import train, device
 from eval import eval
-from config import EPOCHS
+from config import EPOCHS, BATCH_SIZE, LR, OPTIMIZER
 
 wandb.init(
     project="MNISTVision",
     config={
-        "batch_size": BATCH,
+        "batch_size": BATCH_SIZE,
         "learning_rate": LR,
         "epochs": EPOCHS,
         "optimizer": OPTIMIZER,
