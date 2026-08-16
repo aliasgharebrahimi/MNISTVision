@@ -1,11 +1,11 @@
+import wandb
 from dataloader import train_dataloader, eval_dataloader
 from neural_network import model
 from optimizer import optimizer
 from loss import loss_function
 from tarin import train, device
 from eval import eval
-
-EPOCHS = 10
+from config import EPOCHS
 
 for epochs in range(EPOCHS):
 
