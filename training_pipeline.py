@@ -12,6 +12,7 @@ wandb.init(
     config={
         "batch_size": BATCH_SIZE,
         "learning_rate": LR,
+        "epochs": EPOCHS,
         "optimizer": OPTIMIZER,
     }
 )
