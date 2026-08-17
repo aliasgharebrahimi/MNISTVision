@@ -1,4 +1,5 @@
 import torch.nn as nn
+from torchinfo import summary
 
 class MNISTNet(nn.Module):
     def __init__(self):
@@ -27,3 +28,5 @@ class MNISTNet(nn.Module):
         return x
 
 model = MNISTNet()
+
+summary(model, input_size=(1, 1, 28, 28))
