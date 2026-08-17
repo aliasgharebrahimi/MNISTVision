@@ -11,7 +11,7 @@ train_dataloader = DataLoader(
 )
 
 eval_dataloader = DataLoader(
-    train_data,
+    eval_data,
     batch_size=BATCH_SIZE,
     shuffle=True,
     num_workers=0,
