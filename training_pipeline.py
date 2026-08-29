@@ -1,3 +1,4 @@
+import torch
 import wandb
 import time
 from dataloader import train_dataloader, eval_dataloader
