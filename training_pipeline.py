@@ -1,4 +1,6 @@
+import torch
 import wandb
+import time
 from dataloader import train_dataloader, eval_dataloader
 from neural_network import model
 from optimizer import optimizer
@@ -20,9 +22,14 @@ wandb.init(
 )
 
 for epochs in range(EPOCHS):
+    torch.cuda.reset_peak_memory_stats()
+    start_time = time.time()
 
     train_loss = train(model, device, train_dataloader, optimizer, loss_function)
     eval_loss = eval(model, eval_dataloader, loss_function, device)
+
+    epoch_time = time.time() - start_time
+    vram = torch.cuda.max_memory_allocated()
 
     print(f"train loss: {train_loss:.4f}")
     print(f"eval loss: {eval_loss:.4f}")
@@ -31,5 +38,7 @@ for epochs in range(EPOCHS):
     wandb.log({
         "train_loss": train_loss,
         "val_loss": eval_loss,
-        "epoch": epochs + 1,
+        "time": epoch_time,
+        "vram": vram,
+        "epoch": epoch + 1,
     })
