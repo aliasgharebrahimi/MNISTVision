@@ -1,0 +1,21 @@
+train loss: 0.5540
+eval loss: 0.2039
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 24, in <module>
+    train_loss = train(model, device, train_dataloader, optimizer, loss_function)
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\tarin.py", line 12, in train
+    for batch_idx, (data, target) in enumerate(dataloader):
+                                     ~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 718, in __next__
+    data = self._next_data()
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 778, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 54, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\datasets\mnist.py", line 143, in __getitem__
+    img = _Image_fromarray(img.numpy(), mode="L")
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\utils.py", line 239, in _Image_fromarray
+    strides = arr.get("strides", None)
+KeyboardInterrupt
