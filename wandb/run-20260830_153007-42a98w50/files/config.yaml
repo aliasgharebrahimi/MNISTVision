@@ -1,0 +1,48 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            p5pf45cj2hfnyyaviije6cqwingt6s5t:
+                codePath: training_pipeline.py
+                codePathLocal: training_pipeline.py
+                email: aliasghare1.ai@gmail.com
+                executable: C:\Users\mohammad\PyCharmMiscProject\.venv\Scripts\python.exe
+                git:
+                    commit: f40390f56d102ba5ca309b506ce93f4813544a23
+                    remote: https://github.com/aliasgharebrahimi/MNISTVision.git
+                host: Ali-Asghar-Ebrahimi
+                os: Windows-10-10.0.19045-SP0
+                program: C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py
+                python: CPython 3.14.2
+                root: C:\Users\mohammad\Desktop\Projects\MNISVision
+                startedAt: "2026-08-30T12:00:07.020606Z"
+                writerId: p5pf45cj2hfnyyaviije6cqwingt6s5t
+        m: []
+        python_version: 3.14.2
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 16
+            "4": 3.14.2
+            "5": 0.28.2
+            "8":
+                - 3
+            "12": 0.28.2
+            "13": windows-amd64
+batch_size:
+    value: 128
+epochs:
+    value: 2
+kernel_size:
+    value: 3
+layers:
+    value: 2
+learning_rate:
+    value: 0.001
+optimizer:
+    value: Adam

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 25, in <module>
+    torch.cuda.reset_peak_memory_stats()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\cuda\memory.py", line 381, in reset_peak_memory_stats
+    return torch._C._cuda_resetPeakMemoryStats(device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torch._C' has no attribute '_cuda_resetPeakMemoryStats'

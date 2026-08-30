@@ -22,14 +22,18 @@ wandb.init(
 )
 
 for epochs in range(EPOCHS):
-    torch.cuda.reset_peak_memory_stats()
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats()
     start_time = time.time()
 
     train_loss = train(model, device, train_dataloader, optimizer, loss_function)
     eval_loss = eval(model, eval_dataloader, loss_function, device)
 
     epoch_time = time.time() - start_time
-    vram = torch.cuda.max_memory_allocated()
+    if torch.cuda.is_available():
+        vram = torch.cuda.max_memory_allocated() / (1024 ** 3)
+    else:
+        vram = 0
 
     print(f"train loss: {train_loss:.4f}")
     print(f"eval loss: {eval_loss:.4f}")
@@ -40,5 +44,5 @@ for epochs in range(EPOCHS):
         "val_loss": eval_loss,
         "time": epoch_time,
         "vram": vram,
-        "epoch": epoch + 1,
+        "epoch": epochs + 1,
     })

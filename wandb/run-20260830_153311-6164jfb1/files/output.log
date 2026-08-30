@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 29, in <module>
+    train_loss = train(model, device, train_dataloader, optimizer, loss_function)
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\tarin.py", line 12, in train
+    for batch_idx, (data, target) in enumerate(dataloader):
+                                     ~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 718, in __next__
+    data = self._next_data()
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\dataloader.py", line 778, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 54, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\datasets\mnist.py", line 146, in __getitem__
+    img = self.transform(img)
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ~~~~~~~~~~~^^^^^
+  File "C:\Users\mohammad\PyCharmMiscProject\.venv\Lib\site-packages\torchvision\transforms\functional.py", line 172, in to_tensor
+    img = img.view(pic.size[1], pic.size[0], F_pil.get_image_num_channels(pic))
+KeyboardInterrupt
