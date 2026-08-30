@@ -1,8 +1,0 @@
-train loss: 0.2870
-eval loss: 0.1226
-============================================================
-Traceback (most recent call last):
-  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 32, in <module>
-    "epoch": epoch + 1,
-             ^^^^^
-NameError: name 'epoch' is not defined. Did you mean: 'epochs'?
