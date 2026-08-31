@@ -23,3 +23,23 @@ https://wandb.ai/aliasghare1-ai-emacv/MNISTVision/table?nw=nwuseraliasghare1ai
 | 8          | 0.001 | 3           | Adam      | 2      | 2     | 1m 8s   | -    | 0.080036   | 0.060195 |
 | 4          | 0.001 | 3           | Adam      | 2      | 2     | 1m 51s  | -    | 0.080619   | 0.058984 |
 | 2          | 0.001 | 3           | Adam      | 2      | 2     | 3m 12s  | -    | 0.073757   | 0.058649 |
+
+<hr>
+
+**Conclusion:**
+
+<hr>
+
+Well, we need to determine the optimal batch size based on the fundamental rule: first, identify the batch size that yields the best model **accuracy**; then, **if other batch sizes** produce accuracy figures close to that peak, consider factors like **runtime** and **VRAM** usage.
+
+<hr>
+
+**The best batch size?**
+
+Well, the best accuracy here is for a batch size of **16**.
+
+Now, regarding batch sizes close to 16, we can consider batch sizes of **2** and **4**, as the difference is minimal. However, if we look at the **runtime**, the runtimes for batch sizes 2 and 4 are significantly higher than that of batch size **16**; therefore, **16** is the best choice for this model's batch size.
+
+<hr>
+
+**Batch Size:** 16
