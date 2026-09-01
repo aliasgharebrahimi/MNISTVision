@@ -28,9 +28,15 @@ https://wandb.ai/aliasghare1-ai-emacv/MNISTVision/table?nw=nwuseraliasghare1ai
 
 **Conclusion:**
 
-<hr>
-
 Well, we need to determine the optimal batch size based on the fundamental rule: first, identify the batch size that yields the best model **accuracy**; then, **if other batch sizes** produce accuracy figures close to that peak, consider factors like **runtime** and **VRAM** usage.
+
+**So, when determining the gap between two batch sizes—if that gap is small—how do we go about looking at runtime and VRAM?**
+
+There is a simple general rule.
+
+- **If the difference was less than 1%:** The remaining parameters must be seriously examined.
+- **If the difference was between 1% and 3%:** You could also pay attention to the other parameters, but it depends heavily on VRAM and runtime.
+- **If it was more than 3%:** Generally, a lower validation loss is preferable.
 
 <hr>
 
