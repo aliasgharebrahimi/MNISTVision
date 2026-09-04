@@ -43,3 +43,10 @@ a lightweight computational footprint.
 | Training + Testing Time |   52s |
 | Parameters | 3,426 |
 | Model Size |  8 MB |
+
+### Training Curves
+
+The following curves illustrate the model's learning progress throughout
+the training process, including changes in loss and accuracy across epochs.
+
+![Training Curves](docs/images/training_curves.png)
