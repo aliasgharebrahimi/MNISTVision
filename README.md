@@ -1,5 +1,8 @@
 # MNISTVision
+
 > A handwritten digit recognition model featuring robust optimization, very high speed and accuracy, and an architecture of my own design.
+
+---
 
 ## Overview
 
@@ -8,6 +11,8 @@ Recognizing handwritten digits accurately and efficiently requires a model that 
 This project focuses on developing an optimized deep learning model for handwritten digit recognition, with an emphasis on high accuracy, fast inference, and efficient computation.
 
 The model is designed to provide reliable predictions while maintaining high execution speed, making it suitable for real-time and resource-efficient applications.
+
+---
 
 ## Key Features
 
@@ -21,49 +26,48 @@ The model is designed to provide reliable predictions while maintaining high exe
 - Includes research and scientific rationale for the entire project
 - Professional README.md
 
+---
+
 ## Results
 
-MNISTVision was evaluated on the MNIST test set to measure its
-classification performance, inference efficiency, and computational cost.
+MNISTVision was evaluated on the MNIST test set to measure its classification performance, inference efficiency, and computational cost.
 
 ### Performance
 
-| Metric        |  Score |
-|---------------|-------:|
-| Test Accuracy |    98% |
-| Test Loss     | 0.056807 |
+| Metric | Score |
+|---|---:|
+| Test Accuracy | 98% |
+| Test Loss | 0.056807 |
 
 ### Efficiency
 
-MNISTVision is designed to provide fast inference while maintaining
-a lightweight computational footprint.
+MNISTVision is designed to provide fast inference while maintaining a lightweight computational footprint.
 
 | Metric | Value |
-|---|------:|
-| Training + Testing Time |   52s |
+|---|---:|
+| Training + Testing Time | 52s |
 | Parameters | 3,426 |
-| Model Size |  8 MB |
+| Model Size | 8 MB |
 
 ### Training Curves
 
-The following curves illustrate the model's learning progress throughout
-the training process, including changes in loss and accuracy across epochs.
+The following curves illustrate the model's learning progress throughout the training process, including changes in loss and accuracy across epochs.
 
 ![Training Curves](docs/images/training_curves.png)
 
 ### Confusion Matrix
 
-The confusion matrix provides a detailed view of the model's
-classification performance across all ten digit classes.
+The confusion matrix provides a detailed view of the model's classification performance across all ten digit classes.
 
 ![Confusion Matrix](docs/images/confusion_matrix.png)
 
 ### Sample Predictions
 
-The following examples demonstrate the model's predictions on unseen
-handwritten digit images.
+The following examples demonstrate the model's predictions on unseen handwritten digit images.
 
 ![Sample Predictions](docs/images/sample_predictions.png)
+
+---
 
 ## Project Structure
 
@@ -93,6 +97,8 @@ MNISTVision/
 ├── transforms.py
 └── webcam_inference.py
 ```
+
+---
 
 ## Installation
 
@@ -148,6 +154,8 @@ pip --version
 python train_pipeline.py
 ```
 
+---
+
 ## Dataset
 
 MNISTVision uses the **MNIST dataset** for handwritten digit classification.
@@ -171,10 +179,11 @@ Both training and evaluation samples are converted to PyTorch tensors using `ToT
 
 The dataset is automatically downloaded to the `./data` directory when it is not already available locally.
 
+---
+
 ## Training
 
-MNISTVision uses a lightweight training configuration designed for
-efficient handwritten digit classification.
+MNISTVision uses a lightweight training configuration designed for efficient handwritten digit classification.
 
 ### Training Configuration
 
@@ -189,42 +198,37 @@ efficient handwritten digit classification.
 
 ### Optimization
 
-The model is optimized using the **Adam optimizer** with a learning rate
-of `0.001`.
+The model is optimized using the **Adam optimizer** with a learning rate of `0.001`.
 
-The training objective is defined using **Cross-Entropy Loss**, which is
-suitable for the multi-class handwritten digit classification task.
+The training objective is defined using **Cross-Entropy Loss**, which is suitable for the multi-class handwritten digit classification task.
 
 ### Training Pipeline
 
-The training process consists of iterating over the training dataset
-for the configured number of epochs, computing the classification loss,
-and updating the model parameters using Adam.
+The training process consists of iterating over the training dataset for the configured number of epochs, computing the classification loss, and updating the model parameters using Adam.
+
+---
 
 ## Reproducibility
 
-MNISTVision uses a fixed random seed to improve the reproducibility
-of training and evaluation results.
+MNISTVision uses a fixed random seed to improve the reproducibility of training and evaluation results.
 
-A fixed seed is configured to ensure consistent behavior across
-experiments involving randomized operations.
+A fixed seed is configured to ensure consistent behavior across experiments involving randomized operations.
 
 ```python
 SEED = 42
 ```
 
-Using a fixed seed helps make experiments more consistent and allows
-results to be compared more reliably across different runs.
+Using a fixed seed helps make experiments more consistent and allows results to be compared more reliably across different runs.
+
+---
 
 ## Technical Details
 
-MNISTVision uses a custom convolutional neural network designed for
-handwritten digit classification.
+MNISTVision uses a custom convolutional neural network designed for handwritten digit classification.
 
 ### Model Architecture
 
-The network consists of two convolutional blocks followed by a fully
-connected classification layer.
+The network consists of two convolutional blocks followed by a fully connected classification layer.
 
 | Layer | Configuration |
 |---|---|
@@ -239,15 +243,15 @@ connected classification layer.
 
 ### Classification
 
-The final fully connected layer produces **10 output values**, corresponding
-to the ten MNIST digit classes (`0`–`9`).
+The final fully connected layer produces **10 output values**, corresponding to the ten MNIST digit classes (`0`–`9`).
 
-The model uses **Cross-Entropy Loss** for multi-class classification and
-the **Adam optimizer** for parameter optimization.
+The model uses **Cross-Entropy Loss** for multi-class classification and the **Adam optimizer** for parameter optimization.
 
 ### Parameter Count
 
 The model contains **3,426 trainable parameters**.
+
+---
 
 ## Limitations
 
@@ -256,6 +260,8 @@ The current implementation has several limitations:
 - The model is currently evaluated only on the MNIST dataset.
 - The current architecture is optimized for the relatively simple MNIST classification task and may not generalize to more complex image classification problems.
 
+---
+
 ## Future Work
 
 Potential improvements and extensions for MNISTVision include:
@@ -263,6 +269,8 @@ Potential improvements and extensions for MNISTVision include:
 - Better and more advanced optimization
 - Using other tools for experiment tracking
 - Adding documents and further research
+
+---
 
 ## Citation
 
@@ -287,17 +295,23 @@ If you use MNISTVision in your research or project, please cite this repository.
 }
 ```
 
+---
+
 ## License
 
 This project is licensed under the **Apache License 2.0**.
+
 See the [LICENSE](LICENSE) file for the full license text.
+
+---
 
 ## Acknowledgments
 
 This project was developed as an independent deep learning and computer vision project.
 
-Special thanks to the open-source community and the developers of PyTorch and
-TorchVision for providing the tools and frameworks used in this project.
+Special thanks to the open-source community and the developers of PyTorch and TorchVision for providing the tools and frameworks used in this project.
+
+---
 
 ## Contributing
 
@@ -311,5 +325,4 @@ If you would like to contribute to MNISTVision, please:
 4. Commit your changes with a clear commit message.
 5. Open a Pull Request describing your changes.
 
-Please ensure that contributions are consistent with the project's goals
-and maintain a clean and reproducible development workflow.
+Please ensure that contributions are consistent with the project's goals and maintain a clean and reproducible development workflow.
