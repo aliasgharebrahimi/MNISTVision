@@ -291,3 +291,10 @@ If you use MNISTVision in your research or project, please cite this repository.
 
 This project is licensed under the **Apache License 2.0**.
 See the [LICENSE](LICENSE) file for the full license text.
+
+## Acknowledgments
+
+This project was developed as an independent deep learning and computer vision project.
+
+Special thanks to the open-source community and the developers of PyTorch and
+TorchVision for providing the tools and frameworks used in this project.
