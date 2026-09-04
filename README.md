@@ -35,8 +35,6 @@ classification performance, inference efficiency, and computational cost.
 
 ### Efficiency
 
-### Efficiency
-
 MNISTVision is designed to provide fast inference while maintaining
 a lightweight computational footprint.
 
