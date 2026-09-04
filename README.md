@@ -255,3 +255,11 @@ The current implementation has several limitations:
 
 - The model is currently evaluated only on the MNIST dataset.
 - The current architecture is optimized for the relatively simple MNIST classification task and may not generalize to more complex image classification problems.
+
+## Future Work
+
+Potential improvements and extensions for MNISTVision include:
+
+- Better and more advanced optimization
+- Using other tools for experiment tracking
+- Adding documents and further research
