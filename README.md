@@ -248,3 +248,10 @@ the **Adam optimizer** for parameter optimization.
 ### Parameter Count
 
 The model contains **3,426 trainable parameters**.
+
+## Limitations
+
+The current implementation has several limitations:
+
+- The model is currently evaluated only on the MNIST dataset.
+- The current architecture is optimized for the relatively simple MNIST classification task and may not generalize to more complex image classification problems.
