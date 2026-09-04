@@ -147,3 +147,56 @@ pip --version
 ```bash
 python train_pipeline.py
 ```
+
+## Dataset
+
+MNISTVision uses the **MNIST dataset** for handwritten digit classification.
+
+The dataset consists of grayscale images of handwritten digits from **0 to 9**.
+
+| Property | Value |
+|---|---:|
+| Training Samples | 60,000 |
+| Evaluation Samples | 10,000 |
+| Number of Classes | 10 |
+| Image Size | 28 × 28 |
+| Channels | 1 (Grayscale) |
+
+### Preprocessing
+
+Both training and evaluation samples are converted to PyTorch tensors using `ToTensor()`.
+
+- Training transform: `ToTensor()`
+- Evaluation transform: `ToTensor()`
+
+The dataset is automatically downloaded to the `./data` directory when it is not already available locally.
+
+## Training
+
+MNISTVision uses a lightweight training configuration designed for
+efficient handwritten digit classification.
+
+### Training Configuration
+
+| Parameter | Value |
+|---|---:|
+| Epochs | 2 |
+| Batch Size | 16 |
+| Learning Rate | 0.001 |
+| Optimizer | Adam |
+| Loss Function | Cross-Entropy Loss |
+| Kernel Size | 3 |
+
+### Optimization
+
+The model is optimized using the **Adam optimizer** with a learning rate
+of `0.001`.
+
+The training objective is defined using **Cross-Entropy Loss**, which is
+suitable for the multi-class handwritten digit classification task.
+
+### Training Pipeline
+
+The training process consists of iterating over the training dataset
+for the configured number of epochs, computing the classification loss,
+and updating the model parameters using Adam.
