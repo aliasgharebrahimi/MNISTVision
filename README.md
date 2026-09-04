@@ -8,3 +8,15 @@ Recognizing handwritten digits accurately and efficiently requires a model that 
 This project focuses on developing an optimized deep learning model for handwritten digit recognition, with an emphasis on high accuracy, fast inference, and efficient computation.
 
 The model is designed to provide reliable predictions while maintaining high execution speed, making it suitable for real-time and resource-efficient applications.
+
+## Key Features
+
+- Maximum execution speed
+- Highly robust optimization
+- Very high precision
+- Advanced hyperparameter tuning with the experimental tracking method with W&B
+- The modular nature of the project
+- Highly professional and clean commits and branches
+- Custom neural network architecture
+- Includes research and scientific rationale for the entire project
+- Professional README.md
