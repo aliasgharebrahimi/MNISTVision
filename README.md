@@ -64,3 +64,32 @@ The following examples demonstrate the model's predictions on unseen
 handwritten digit images.
 
 ![Sample Predictions](docs/images/sample_predictions.png)
+
+## Project Structure
+
+```text
+MNISTVision/
+├── data/
+│
+├── research/
+│   └── hyperparameter/
+│       ├── batch_size.md
+│       └── lr.md
+│
+├── wandb/
+│
+├── config.py
+├── dataloader.py
+├── dataset.py
+├── eval.py
+├── LICENSE
+├── loss.py
+├── neural_network.py
+├── optimizer.py
+├── README.md
+├── requirements.txt
+├── train.py
+├── train_pipeline.py
+├── transforms.py
+└── webcam_inference.py
+```
