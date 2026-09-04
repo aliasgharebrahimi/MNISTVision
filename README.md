@@ -200,3 +200,18 @@ suitable for the multi-class handwritten digit classification task.
 The training process consists of iterating over the training dataset
 for the configured number of epochs, computing the classification loss,
 and updating the model parameters using Adam.
+
+## Reproducibility
+
+MNISTVision uses a fixed random seed to improve the reproducibility
+of training and evaluation results.
+
+A fixed seed is configured to ensure consistent behavior across
+experiments involving randomized operations.
+
+```python
+SEED = 42
+```
+
+Using a fixed seed helps make experiments more consistent and allows
+results to be compared more reliably across different runs.
