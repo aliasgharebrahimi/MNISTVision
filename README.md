@@ -263,3 +263,25 @@ Potential improvements and extensions for MNISTVision include:
 - Better and more advanced optimization
 - Using other tools for experiment tracking
 - Adding documents and further research
+
+## Citation
+
+If you use MNISTVision in your research or project, please cite this repository.
+
+```bibtex
+@software{mnistvision,
+  title  = {MNISTVision},
+  author = {Ali Asghar Ebrahimi},
+  year   = {2026},
+  url    = {https://github.com/aliasgharebrahimi/MNISTVision}
+}
+```
+
+```bibtex
+@article{mnistvision_paper,
+  title   = {},
+  author  = {Ali Asghar Ebrahimi},
+  year    = {2026},
+  journal = {},
+  url     = {}
+}
