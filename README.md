@@ -253,6 +253,14 @@ The model contains **3,426 trainable parameters**.
 
 ---
 
+## Experiment Tracking
+
+Experiments and hyperparameter tuning were tracked using **Weights & Biases (W&B)**.
+
+[View experiments on W&B](https://wandb.ai/aliasghare1-ai-emacv/MNISTVision/table?nw=nwuseraliasghare1ai)
+
+---
+
 ## Limitations
 
 The current implementation has several limitations:
