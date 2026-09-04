@@ -298,3 +298,18 @@ This project was developed as an independent deep learning and computer vision p
 
 Special thanks to the open-source community and the developers of PyTorch and
 TorchVision for providing the tools and frameworks used in this project.
+
+## Contributing
+
+Contributions are welcome.
+
+If you would like to contribute to MNISTVision, please:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and keep the code clean and focused.
+4. Commit your changes with a clear commit message.
+5. Open a Pull Request describing your changes.
+
+Please ensure that contributions are consistent with the project's goals
+and maintain a clean and reproducible development workflow.
