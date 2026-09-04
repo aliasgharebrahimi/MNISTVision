@@ -285,3 +285,9 @@ If you use MNISTVision in your research or project, please cite this repository.
   journal = {},
   url     = {}
 }
+```
+
+## License
+
+This project is licensed under the **Apache License 2.0**.
+See the [LICENSE](LICENSE) file for the full license text.
