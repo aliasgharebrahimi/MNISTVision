@@ -147,3 +147,26 @@ pip --version
 ```bash
 python train_pipeline.py
 ```
+
+## Dataset
+
+MNISTVision uses the **MNIST dataset** for handwritten digit classification.
+
+The dataset consists of grayscale images of handwritten digits from **0 to 9**.
+
+| Property | Value |
+|---|---:|
+| Training Samples | 60,000 |
+| Evaluation Samples | 10,000 |
+| Number of Classes | 10 |
+| Image Size | 28 × 28 |
+| Channels | 1 (Grayscale) |
+
+### Preprocessing
+
+Both training and evaluation samples are converted to PyTorch tensors using `ToTensor()`.
+
+- Training transform: `ToTensor()`
+- Evaluation transform: `ToTensor()`
+
+The dataset is automatically downloaded to the `./data` directory when it is not already available locally.
