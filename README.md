@@ -57,3 +57,10 @@ The confusion matrix provides a detailed view of the model's
 classification performance across all ten digit classes.
 
 ![Confusion Matrix](docs/images/confusion_matrix.png)
+
+### Sample Predictions
+
+The following examples demonstrate the model's predictions on unseen
+handwritten digit images.
+
+![Sample Predictions](docs/images/sample_predictions.png)
