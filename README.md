@@ -20,3 +20,15 @@ The model is designed to provide reliable predictions while maintaining high exe
 - Custom neural network architecture
 - Includes research and scientific rationale for the entire project
 - Professional README.md
+
+## Results
+
+MNISTVision was evaluated on the MNIST test set to measure its
+classification performance, inference efficiency, and computational cost.
+
+### Performance
+
+| Metric        |  Score |
+|---------------|-------:|
+| Test Accuracy |    98% |
+| Test Loss     | 0.056807 |
