@@ -1,3 +1,4 @@
 import torch
-from config import S
-torch.manual_seed()
+from config import SEED
+
+torch.manual_seed(42)
