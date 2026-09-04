@@ -50,3 +50,10 @@ The following curves illustrate the model's learning progress throughout
 the training process, including changes in loss and accuracy across epochs.
 
 ![Training Curves](docs/images/training_curves.png)
+
+### Confusion Matrix
+
+The confusion matrix provides a detailed view of the model's
+classification performance across all ten digit classes.
+
+![Confusion Matrix](docs/images/confusion_matrix.png)
