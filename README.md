@@ -93,3 +93,57 @@ MNISTVision/
 ├── transforms.py
 └── webcam_inference.py
 ```
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd MNISTVision
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the Virtual Environment
+
+#### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+#### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Upgrade pip
+
+```bash
+python -m pip install --upgrade pip
+```
+
+### 5. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Verify the Installation
+
+```bash
+python --version
+pip --version
+```
+
+### 7. Run the Project
+
+```bash
+python train_pipeline.py
+```
