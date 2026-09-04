@@ -215,3 +215,36 @@ SEED = 42
 
 Using a fixed seed helps make experiments more consistent and allows
 results to be compared more reliably across different runs.
+
+## Technical Details
+
+MNISTVision uses a custom convolutional neural network designed for
+handwritten digit classification.
+
+### Model Architecture
+
+The network consists of two convolutional blocks followed by a fully
+connected classification layer.
+
+| Layer | Configuration |
+|---|---|
+| Conv2D | 1 → 6 channels, Kernel Size = 3, Stride = 1 |
+| ReLU | Activation |
+| MaxPool2D | Kernel Size = 2 |
+| Conv2D | 6 → 12 channels, Kernel Size = 3, Stride = 1 |
+| ReLU | Activation |
+| MaxPool2D | Kernel Size = 2 |
+| Flatten | Feature Flattening |
+| Linear | 300 → 10 |
+
+### Classification
+
+The final fully connected layer produces **10 output values**, corresponding
+to the ten MNIST digit classes (`0`–`9`).
+
+The model uses **Cross-Entropy Loss** for multi-class classification and
+the **Adam optimizer** for parameter optimization.
+
+### Parameter Count
+
+The model contains **3,426 trainable parameters**.
