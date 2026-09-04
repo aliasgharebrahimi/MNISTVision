@@ -170,3 +170,33 @@ Both training and evaluation samples are converted to PyTorch tensors using `ToT
 - Evaluation transform: `ToTensor()`
 
 The dataset is automatically downloaded to the `./data` directory when it is not already available locally.
+
+## Training
+
+MNISTVision uses a lightweight training configuration designed for
+efficient handwritten digit classification.
+
+### Training Configuration
+
+| Parameter | Value |
+|---|---:|
+| Epochs | 2 |
+| Batch Size | 16 |
+| Learning Rate | 0.001 |
+| Optimizer | Adam |
+| Loss Function | Cross-Entropy Loss |
+| Kernel Size | 3 |
+
+### Optimization
+
+The model is optimized using the **Adam optimizer** with a learning rate
+of `0.001`.
+
+The training objective is defined using **Cross-Entropy Loss**, which is
+suitable for the multi-class handwritten digit classification task.
+
+### Training Pipeline
+
+The training process consists of iterating over the training dataset
+for the configured number of epochs, computing the classification loss,
+and updating the model parameters using Adam.
