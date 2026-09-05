@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+from preprocessing import preprocess
 
 canvas = np.ones((400, 400), dtype=np.uint8) * 255
 
@@ -31,6 +31,10 @@ while True:
 
     if key == ord("c") or key == ord("C"):
         canvas[:] = 255
+
+    elif key == ord("p") or key == ord("P"):
+        image = preprocess(canvas)
+        print(image.shape)
 
     elif key == 27:
         break
