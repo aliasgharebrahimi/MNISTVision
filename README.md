@@ -65,7 +65,7 @@ The confusion matrix provides a detailed view of the model's classification perf
 
 The following examples demonstrate the model's predictions on unseen handwritten digit images.
 
-![Sample Predictions](docs/images/sample_predictions.png)
+<video src="media/inderence_media/MNISTVision 2026-09-05 14-17-57.mp4" controls></video>
 
 ---
 
