@@ -46,3 +46,5 @@ for epochs in range(EPOCHS):
         "vram": vram,
         "epoch": epochs + 1,
     })
+
+torch.save(model.state_dict(), "mnist_model.pth")
