@@ -249,7 +249,7 @@ The model uses **Cross-Entropy Loss** for multi-class classification and the **A
 
 ### Parameter Count
 
-The model contains **3,426 trainable parameters**.
+The model contains **3,730 trainable parameters**.
 
 ---
 
