@@ -20,6 +20,11 @@ def train(model, device, dataloader, optimizer, loss_fun ):
         loss.backward()
         optimizer.step()
 
+        for name, param in model.named_parameters():
+            if param.grad is not None:
+                gradient = param.grad.abs().mean().item()
+                print(f"{name}: {gradient:.8f}")
+
         total_loss += loss.item()
 
     return total_loss / len(dataloader)
