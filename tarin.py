@@ -26,10 +26,11 @@ def train(model, device, dataloader, optimizer, loss_fun ):
         utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         optimizer.step()
 
-        for name, param in model.named_parameters():
-            if param.grad is not None:
-                gradient = param.grad.abs().mean().item()
-                print(f"{name}: {gradient:.8f}")
+        def grad_model():
+            for name, param in model.named_parameters():
+                if param.grad is not None:
+                    gradient = param.grad.abs().mean().item()
+                    print(f"{name}: {gradient:.8f}")
 
         total_loss += loss.item()
         total_acc += acc
