@@ -10,7 +10,10 @@ EPOCHS = 10
 for epochs in range(EPOCHS):
 
     train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
-    eval_loss = eval(model, eval_dataloader, loss_function, device)
+    eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device)
 
     print(f"train loss: {train_loss:.4f}")
     print(f"eval loss: {eval_loss:.4f}")
+
+    print(f"train accuracy: {train_acc:.4f}")
+    print(f"eval accuracy: {eval_acc:.4f}")
