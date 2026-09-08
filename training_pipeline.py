@@ -26,7 +26,7 @@ for epochs in range(EPOCHS):
         torch.cuda.reset_peak_memory_stats()
     start_time = time.time()
 
-    train_loss = train(model, device, train_dataloader, optimizer, loss_function)
+    train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
     eval_loss = eval(model, eval_dataloader, loss_function, device)
 
     epoch_time = time.time() - start_time
