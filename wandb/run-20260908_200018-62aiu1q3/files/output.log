@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 29, in <module>
+    train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
+                            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\tarin.py", line 22, in train
+    acc = accuracy(pred, target)
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\accuracy.py", line 3, in accuracy
+    labels = labels.argmax(dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)

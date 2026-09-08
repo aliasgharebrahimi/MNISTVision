@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 29, in <module>
+    train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
+                            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\tarin.py", line 22, in train
+    acc = accuracy(pred, target)
+  File "C:\Users\mohammad\Desktop\Projects\MNISVision\accuracy.py", line 2, in accuracy
+    correct = (pred == labels).sum()
+               ^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (10) must match the size of tensor b (16) at non-singleton dimension 1
