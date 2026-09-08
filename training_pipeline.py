@@ -27,7 +27,7 @@ for epochs in range(EPOCHS):
     start_time = time.time()
 
     train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
-    eval_loss = eval(model, eval_dataloader, loss_function, device)
+    eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device)
 
     epoch_time = time.time() - start_time
     if torch.cuda.is_available():
@@ -37,6 +37,10 @@ for epochs in range(EPOCHS):
 
     print(f"train loss: {train_loss:.4f}")
     print(f"eval loss: {eval_loss:.4f}")
+
+    print(f"train accuracy: {train_acc:.4f}")
+    print(f"eval accuracy: {eval_acc:.4f}")
+
     print(60 * "=")
 
     wandb.log({
