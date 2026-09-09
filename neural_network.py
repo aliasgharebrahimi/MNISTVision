@@ -6,6 +6,7 @@ class MNISTNet(nn.Module):
         super().__init__()
 
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=6, kernel_size=3, stride=1)
+        nn.init.kaiming_normal_(self.conv1.weight, nonlinearity="relu")
         self.relu1 = nn.ReLU()
         self.pool1 = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=3, stride=1)
