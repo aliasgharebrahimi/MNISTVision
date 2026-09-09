@@ -21,3 +21,14 @@
 {"time":"2026-09-08T20:03:50.2839375+03:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
 {"time":"2026-09-08T20:04:04.1705468+03:30","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/aliasghare1-ai-emacv/MNISTVision/m3trfi8a/file_stream","body":"{\"error\":\"mysql query exceeded guard deadline: context deadline exceeded\"}"}
 {"time":"2026-09-08T20:05:31.3294388+03:30","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/aliasghare1-ai-emacv/MNISTVision/m3trfi8a/file_stream","body":"{\"error\":\"mysql query exceeded guard deadline: context deadline exceeded\"}"}
+{"time":"2026-09-08T20:07:05.6738833+03:30","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/aliasghare1-ai-emacv/MNISTVision/m3trfi8a/file_stream","body":"{\"error\":\"mysql query exceeded guard deadline: context deadline exceeded\"}"}
+{"time":"2026-09-08T20:09:58.855723+03:30","level":"INFO","msg":"api: retrying HTTP error","status":408,"url":"https://api.wandb.ai/files/aliasghare1-ai-emacv/MNISTVision/m3trfi8a/file_stream","body":"stream timeout"}
+{"time":"2026-09-08T20:11:27.7703404+03:30","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-09-08T20:11:28.1234674+03:30","level":"INFO","msg":"filestream: sending request","total_files":4,"history_offset":0,"history_lines":1,"events_offset":1,"events_lines":2,"console_offset":8172,"console_lines":18018,"complete":true,"exit_code":255}
+{"time":"2026-09-08T20:13:40.4009725+03:30","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/aliasghare1-ai-emacv/MNISTVision/m3trfi8a/file_stream","body":"{\"error\":\"mysql query exceeded guard deadline: context deadline exceeded\"}"}
+{"time":"2026-09-08T20:14:37.6225213+03:30","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-09-08T20:14:37.6238769+03:30","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-09-08T20:14:37.6241916+03:30","level":"INFO","msg":"handler: closed"}
+{"time":"2026-09-08T20:14:37.6242667+03:30","level":"INFO","msg":"sender: closed"}
+{"time":"2026-09-08T20:14:37.6242667+03:30","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-09-08T20:14:39.6245144+03:30","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}
