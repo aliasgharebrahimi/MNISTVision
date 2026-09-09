@@ -7,9 +7,11 @@ class MNISTNet(nn.Module):
 
         self.conv1 = nn.Conv2d(in_channels=1, out_channels=6, kernel_size=3, stride=1)
         nn.init.kaiming_normal_(self.conv1.weight, nonlinearity="leaky_relu", a=0.01)
+        self.bn1 = nn.BatchNorm2d(num_features=6)
         self.relu1 = nn.LeakyReLU()
         self.pool1 = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=1, stride=1)
+        self.bn2 = nn.BatchNorm2d(num_features=12)
         self.relu2 = nn.LeakyReLU()
         self.pool2 = nn.MaxPool2d(kernel_size=2)
         self.flatten = nn.Flatten()
@@ -18,9 +20,11 @@ class MNISTNet(nn.Module):
     def forward(self, x):
 
         x = self.conv1(x)
+        x = self.bn1(x)
         x = self.relu1(x)
         x = self.pool1(x)
         x = self.conv2(x)
+        x = self.bn2(x)
         x = self.relu2(x)
         x = self.pool2(x)
         x = self.flatten(x)
