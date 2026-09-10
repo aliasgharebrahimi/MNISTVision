@@ -1,0 +1,28 @@
+{
+  "os":  "Windows-10-10.0.19045-SP0",
+  "python":  "CPython 3.14.2",
+  "startedAt":  "2026-09-10T08:04:09.727950Z",
+  "program":  "C:\\Users\\mohammad\\Desktop\\Projects\\MNISVision\\training_pipeline.py",
+  "codePath":  "training_pipeline.py",
+  "codePathLocal":  "training_pipeline.py",
+  "git":  {
+    "remote":  "https://github.com/aliasgharebrahimi/MNISTVision.git",
+    "commit":  "c91d86105c98806f592815ca888e6a46e0725778"
+  },
+  "email":  "aliasghare1.ai@gmail.com",
+  "root":  "C:\\Users\\mohammad\\Desktop\\Projects\\MNISVision",
+  "host":  "Ali-Asghar-Ebrahimi",
+  "executable":  "C:\\Users\\mohammad\\PyCharmMiscProject\\.venv\\Scripts\\python.exe",
+  "cpu_count":  10,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "214091239424",
+      "used":  "120678309888"
+    }
+  },
+  "memory":  {
+    "total":  "16850153472"
+  },
+  "writerId":  "0b854mo52qc253hpqqdxnvae3eus7s1a"
+}

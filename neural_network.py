@@ -11,7 +11,6 @@ class MNISTNet(nn.Module):
         self.relu1 = nn.LeakyReLU()
         self.pool1 = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=3, stride=1)
-        self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=1, stride=1)
         self.bn2 = nn.BatchNorm2d(num_features=12)
         self.relu2 = nn.LeakyReLU()
         self.pool2 = nn.MaxPool2d(kernel_size=2)
