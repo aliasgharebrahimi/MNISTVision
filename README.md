@@ -73,29 +73,45 @@ The following examples demonstrate the model's predictions on unseen handwritten
 
 ```text
 MNISTVision/
+│
+├── .idea/
+│
+├── __pycache__/
+│
 ├── data/
+│   └── MNIST/
+│       └── raw/
+│
+├── inference/
+│
+├── media/
+│   └── inference_media/
 │
 ├── research/
-│   └── hyperparameter/
+│   └── hyper_parametr/
 │       ├── batch_size.md
 │       └── lr.md
 │
 ├── wandb/
 │
+├── .gitignore
+├── LICENSE
+├── README.md
+├── SEED.py
+├── accuracy.py
 ├── config.py
+├── confusion_matrix.py
 ├── dataloader.py
 ├── dataset.py
 ├── eval.py
-├── LICENSE
 ├── loss.py
+├── mnist_model.pth
 ├── neural_network.py
 ├── optimizer.py
-├── README.md
 ├── requirements.txt
-├── train.py
-├── train_pipeline.py
-├── transforms.py
-└── webcam_inference.py
+├── tarin.py
+├── training_pipeline.py
+└── transforms.py
 ```
 
 ---
