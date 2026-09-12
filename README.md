@@ -34,20 +34,20 @@ MNISTVision was evaluated on the MNIST test set to measure its classification pe
 
 ### Performance
 
-| Metric | Score |
-|---|---:|
-| Test Accuracy | 98% |
-| Test Loss | 0.056807 |
+| Metric |    Score |
+|---|---------:|
+| Test Accuracy |      98% |
+| Test Loss | 0.016807 |
 
 ### Efficiency
 
 MNISTVision is designed to provide fast inference while maintaining a lightweight computational footprint.
 
-| Metric | Value |
-|---|---:|
-| Training + Testing Time | 52s |
-| Parameters | 3,426 |
-| Model Size | 8 MB |
+| Metric |   Value |
+|---|--------:|
+| Training + Testing Time |     52s |
+| Parameters |   3,766 |
+| Model Size | 0.11 MB |
 
 ### Training Curves
 
