@@ -2,7 +2,7 @@ import torch
 import wandb
 import time
 from dataloader import train_dataloader, eval_dataloader
-from neural_network import model
+from neural_network.mnistnet import model
 from optimizer import optimizer
 from loss import loss_function
 from tarin import train, device
