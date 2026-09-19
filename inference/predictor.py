@@ -1,11 +1,8 @@
 import torch
-from neural_network import MNISTNet
-
+from neural_network.mnistnet import model
+from pathlib import Path
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-model = MNISTNet()
-from pathlib import Path
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "mnist_model.pth"
 
