@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\mohammad\Desktop\Projects\MNISVision\training_pipeline.py", line 23, in <module>
-    torch.cuda.reset_peak_memory_stats()
-    ^^^^^
-NameError: name 'torch' is not defined
