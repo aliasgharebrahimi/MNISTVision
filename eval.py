@@ -3,7 +3,7 @@ from tarin import device
 from accuracy import accuracy
 from confusion_matrix import confusion_matrix, plot_confusion_matrix
 
-def eval(model, dataloader, loss_func, device):
+def eval(model, dataloader, loss_func, device,  confusion_matrix=False):
 
     model.eval()
     model = model.to(device)
@@ -29,7 +29,8 @@ def eval(model, dataloader, loss_func, device):
     all_pred = torch.cat(all_pred, dim=0)
     all_label = torch.cat(all_label, dim=0)
 
-    cm = confusion_matrix(all_pred, all_label, 10)
-    plot_confusion_matrix(cm)
+    if confusion_matrix:
+        cm = confusion_matrix(all_pred, all_label, 10)
+        plot_confusion_matrix(cm)
 
     return total_loss / len(dataloader), total_accuracy / len(dataloader)
