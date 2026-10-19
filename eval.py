@@ -1,5 +1,6 @@
 import torch
 from tarin import device
+from accuracy import accuracy
 
 def eval(model, dataloader, loss_func, device):
 
@@ -7,9 +8,11 @@ def eval(model, dataloader, loss_func, device):
     model = model.to(device)
 
     total_loss = 0
+    total_accuracy = 0
 
     with torch.no_grad():
         for batch_idx, (data, target) in enumerate(dataloader):
+<<<<<<< HEAD
 
             pred = model(data)
             loss = loss_func(pred, target)
@@ -17,5 +20,13 @@ def eval(model, dataloader, loss_func, device):
             total_loss += loss.item()
 
 
+=======
 
-    return total_loss / len(dataloader)
+            pred = model(data)
+            loss = loss_func(pred, target)
+
+            total_loss += loss.item()
+            total_accuracy += accuracy(pred, target)
+>>>>>>> feature/eval
+
+    return total_loss / len(dataloader), total_accuracy / len(dataloader)
