@@ -1,0 +1,21 @@
+import torch
+from neural_network.mnistnet import model
+from pathlib import Path
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+MODEL_PATH = Path(__file__).resolve().parent.parent / "mnist_model.pth"
+
+model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
+model.to(device)
+model.eval()
+
+def predict(image):
+    image = image.to(device)
+
+    with torch.no_grad():
+        output = model(image)
+
+    prediction = torch.argmax(output, dim=1)
+
+    return prediction.item()
