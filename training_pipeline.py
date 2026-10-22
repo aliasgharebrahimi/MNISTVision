@@ -27,7 +27,11 @@ for epochs in range(EPOCHS):
     start_time = time.time()
 
     train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
-    eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device)
+
+    if epochs == EPOCHS:
+        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device, confusion_matrix=True)
+    else:
+        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device)
 
     epoch_time = time.time() - start_time
     if torch.cuda.is_available():
