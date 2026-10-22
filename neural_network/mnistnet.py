@@ -34,5 +34,5 @@ class MNISTNet(nn.Module):
         return x
 
 model = MNISTNet()
-model.load_state_dict(initial_weights)
+
 summary(model, input_size=(1, 1, 28, 28))
