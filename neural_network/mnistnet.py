@@ -1,6 +1,6 @@
 import torch.nn as nn
 from torchinfo import summary
-from ..neural_network.blocks import ConvBlock
+from blocks import ConvBlock
 
 class MNISTNet(nn.Module):
     def __init__(self):
