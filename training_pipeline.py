@@ -7,7 +7,7 @@ from optimizer import optimizer
 from loss import loss_function
 from tarin import train, device
 from eval import eval
-from config import EPOCHS, LR, OPTIMIZER, BATCH_SIZE, KERNEL_SIZE
+from config import EPOCHS, LR, OPTIMIZER, BATCH_SIZE, KERNEL_SIZE, STRIDE
 
 wandb.init(
     project="MNISTVision",
@@ -26,12 +26,12 @@ for epochs in range(EPOCHS):
         torch.cuda.reset_peak_memory_stats()
     start_time = time.time()
 
-    train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function)
+    train_loss, train_acc = train(model, device, train_dataloader, optimizer, loss_function, stride=STRIDE)
 
     if epochs == EPOCHS:
-        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device, confusion_matrix=True)
+        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device, confusion_matrix=True, stride=STRIDE)
     else:
-        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device)
+        eval_loss, eval_acc = eval(model, eval_dataloader, loss_function, device, stride=STRIDE)
 
     epoch_time = time.time() - start_time
     if torch.cuda.is_available():
