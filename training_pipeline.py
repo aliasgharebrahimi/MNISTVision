@@ -17,7 +17,8 @@ wandb.init(
         "epochs": EPOCHS,
         "optimizer": OPTIMIZER,
         "kernel_size": KERNEL_SIZE,
-        "layers": 2
+        "layers": 2,
+        "stride": STRIDE
     }
 )
 
