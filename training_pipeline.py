@@ -7,7 +7,7 @@ from optimizer import optimizer
 from loss import loss_function
 from tarin import train, device
 from eval import eval
-from config import EPOCHS, LR, OPTIMIZER, BATCH_SIZE, KERNEL_SIZE
+from config import EPOCHS, LR, OPTIMIZER, BATCH_SIZE, KERNEL_SIZE, STRIDE
 
 wandb.init(
     project="MNISTVision",
@@ -17,6 +17,7 @@ wandb.init(
         "epochs": EPOCHS,
         "optimizer": OPTIMIZER,
         "kernel_size": KERNEL_SIZE,
+        "stride": STRIDE
     }
 )
 
