@@ -7,8 +7,4 @@ SEED = 42
 
 # Model Architecture Parameters
 KERNEL_SIZE = 3
-<<<<<<< HEAD
-SEED = 42
-=======
 STRIDE = 1
->>>>>>> feature/config_management
