@@ -1,7 +1,9 @@
+# Imports
 from torch.utils.data import DataLoader
 from dataset import train_data, eval_data
 from config import BATCH_SIZE
 
+# Training Dataloader
 train_dataloader = DataLoader(
     train_data,
     batch_size=BATCH_SIZE,
@@ -10,6 +12,7 @@ train_dataloader = DataLoader(
     pin_memory=False
 )
 
+# Evaling Dataloader
 eval_dataloader = DataLoader(
     eval_data,
     batch_size=BATCH_SIZE,
