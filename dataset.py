@@ -1,7 +1,8 @@
+# Imports
 from torchvision.datasets import MNIST
 from transforms import train_transforms, eval_transforms
 
-
+# Load the training dataset and apply training transforms
 train_data = MNIST(
     root="./data",
     train=True,
@@ -10,6 +11,7 @@ train_data = MNIST(
     download=True
 )
 
+# Load the test dataset and apply evaluation transforms
 eval_data = MNIST(
     root="./data",
     train=False,
