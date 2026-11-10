@@ -1,5 +1,7 @@
+# Import
 import torch
 
+# Compute the classification accuracy
 def accuracy(pred, labels):
     pred = torch.argmax(pred, dim=1)
 
